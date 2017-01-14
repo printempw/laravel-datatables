@@ -1,5 +1,5 @@
 {
-    "name": "printempw/laravel-datatables-oracle",
+    "name": "printempw/laravel-datatables-lite",
     "description": "A lite version of yajra/laravel-datatables, with HTML builders & exporting removed.",
     "keywords" : ["laravel4","laravel5","laravel","datatables","datatable","datatables jquery plugin"],
     "license": "MIT",
