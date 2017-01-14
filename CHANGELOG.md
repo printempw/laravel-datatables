@@ -8,6 +8,9 @@
 
 ##Change Log
 
+### v6.3 - 2017-01-14
+- First release of lite version.
+
 ### v6.22.7 - 2017-01-04
 - Add datatables alias to fix singleton. PR #903, credits to @ElfSundae
 - Use static class name instead FQCN. PR #902, credits to @ElfSundae
