@@ -1,3 +1,9 @@
+# Attention!
+
+This repository is a lite fork of yajra/laravel-datatables, 
+which removed HTML builder, Excel/PDF/CSV exporting and so on.
+The lite version has no such huge dependencies.
+
 # jQuery DataTables API for Laravel 4|5
 
 [![Join the chat at https://gitter.im/yajra/laravel-datatables](https://badges.gitter.im/yajra/laravel-datatables.svg)](https://gitter.im/yajra/laravel-datatables?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

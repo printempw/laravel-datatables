@@ -32,11 +32,7 @@ class DatatablesServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'datatables');
-
         $this->publishAssets();
-
-        $this->registerCommands();
     }
 
     /**
@@ -45,25 +41,8 @@ class DatatablesServiceProvider extends ServiceProvider
     protected function publishAssets()
     {
         $this->publishes([
-            __DIR__ . '/config/config.php' => config_path('datatables.php'),
+            __DIR__ . '/config.php' => config_path('datatables.php'),
         ], 'datatables');
-
-        $this->publishes([
-            __DIR__ . '/resources/assets/buttons.server-side.js' => public_path('vendor/datatables/buttons.server-side.js'),
-        ], 'datatables');
-
-        $this->publishes([
-            __DIR__ . '/resources/views' => base_path('/resources/views/vendor/datatables'),
-        ], 'datatables');
-    }
-
-    /**
-     * Register datatables commands.
-     */
-    protected function registerCommands()
-    {
-        $this->commands(DataTablesMakeCommand::class);
-        $this->commands(DataTablesScopeCommand::class);
     }
 
     /**
@@ -76,8 +55,6 @@ class DatatablesServiceProvider extends ServiceProvider
         if ($this->isLumen()) {
             require_once 'fallback.php';
         }
-
-        $this->registerRequiredProviders();
 
         $this->app->singleton('datatables', function () {
             return new Datatables($this->app->make(Request::class));
@@ -112,15 +89,6 @@ class DatatablesServiceProvider extends ServiceProvider
     protected function isLumen()
     {
         return str_contains($this->app->version(), 'Lumen');
-    }
-
-    /**
-     * Register 3rd party providers.
-     */
-    protected function registerRequiredProviders()
-    {
-        $this->app->register(HtmlServiceProvider::class);
-        $this->app->register(ExcelServiceProvider::class);
     }
 
     /**

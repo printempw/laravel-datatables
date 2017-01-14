@@ -115,16 +115,6 @@ class Datatables
     }
 
     /**
-     * Get html builder class.
-     *
-     * @return \Yajra\Datatables\Html\Builder
-     */
-    public function getHtmlBuilder()
-    {
-        return app(\Yajra\Datatables\Html\Builder::class);
-    }
-
-    /**
      * Get request object.
      *
      * @return \Yajra\Datatables\Request|static

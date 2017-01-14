@@ -104,7 +104,7 @@ abstract class BaseEngine implements DataTableEngineContract
      * @var bool
      */
     protected $autoFilter = true;
-    
+
     /**
      * Select trashed records in count function for models with soft deletes trait.
      * By default we do not select soft deleted records
@@ -401,7 +401,7 @@ abstract class BaseEngine implements DataTableEngineContract
 
         return $this;
     }
-    
+
     /**
      * Change withTrashed flag value.
      *
@@ -411,7 +411,7 @@ abstract class BaseEngine implements DataTableEngineContract
     public function withTrashed($withTrashed = true)
     {
         $this->withTrashed = $withTrashed;
-        
+
         return $this;
     }
 
